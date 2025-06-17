@@ -11,6 +11,7 @@ RUN apt-get update && \
  
 # Expose HTTP port
 EXPOSE 80
+EXPOSE 8080
  
 # Start NGINX in the foreground
 CMD ["nginx", "-g", "daemon off;"]
