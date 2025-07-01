@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ruby-deployment
+  labels:
+    app: ruby-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ruby-app
+  template:
+    metadata:
+      labels:
+        app: ruby-app
+    spec:
+      containers:
+      - name: ruby-container
+        image: harikrishh/demo:latest
+        ports:
+        - containerPort: 4567  # Change this if the Ruby app listens on a different port
