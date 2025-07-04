@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: ruby-container
-        image: "${DOCKER_IMAGE}"   # This will be replaced with actual image name
+        image: v1.82   # This will be replaced with actual image name
         ports:
         - containerPort: 4567
