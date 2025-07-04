@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: ruby-container
-        image: v1.82   # This will be replaced with actual image name
+        image: "harikrishh/demo:v1.${BUILD_ID}"  # Jenkins will replace ${BUILD_ID} with the actual value
         ports:
         - containerPort: 4567
