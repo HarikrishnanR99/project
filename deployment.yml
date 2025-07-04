@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: ruby-container
-        image: harikrishh/demo:latest
+        image: "${DOCKER_IMAGE}"   # This will be replaced with actual image name
         ports:
-        - containerPort: 4567  # Change this if the Ruby app listens on a different port
+        - containerPort: 4567
