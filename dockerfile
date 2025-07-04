@@ -15,9 +15,6 @@ WORKDIR /app
 # Copy the Ruby application files into the container
 COPY . /app
  
-# Install any gems (assuming you have a Gemfile in the project)
-RUN bundle install
- 
 # Expose the port that your Ruby app listens on (e.g., 4567 for Sinatra apps)
 EXPOSE 4567
  
