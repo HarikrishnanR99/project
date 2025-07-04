@@ -1,13 +1,27 @@
 - hosts: node
 
   become: true
-
+ 
   tasks:
+ 
+    - name: Create new deployment as ubuntu
 
-    - name: Create new deployment
+      become: false
 
       command: kubectl apply -f /home/ubuntu/deployment.yml
+
+      environment:
+
+        KUBECONFIG: /home/ubuntu/.kube/config
  
-    - name: Create new service
+    - name: Create new service as ubuntu
+
+      become: false
 
       command: kubectl apply -f /home/ubuntu/service.yml
+
+      environment:
+
+        KUBECONFIG: /home/ubuntu/.kube/config
+
+ 
